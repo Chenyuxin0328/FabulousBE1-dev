@@ -1,0 +1,55 @@
+spring:
+  data:
+    redis:
+      timeout: 0
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+    time-zone: UTC
+    serialization:
+      write-dates-as-timestamps: false
+      write-date-keys-as-timestamps: false
+#  datasource:
+#    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://59.77.134.42:1433;database=QWiki;encrypt=false;
+#    username: qwiki
+#    password: sosd2013!#
+
+  redis:
+    redisson:
+      file: classpath:redisson.yaml
+
+server:
+  port: 5083
+
+minio:
+  host: 59.77.134.42
+  port: 9000
+  accessKey: YfSRPdth7ajZEEXgld2O
+  secretKey: 5EAeFH3DMrt223M334ImEtoDSoCdIuMpoOTRwIOA
+  bucket: fabulous
+
+springdoc:
+  default-produces-media-type: application/json
+
+hash:
+  salt: qwikiisallyouneed
+jsonwebtoken:
+  issuer: fabulous@creatorsn.com
+  #  secret: eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzEzODYzNzc3fQ.8mx_0wf8TesXiA9Atp9Yo36vW3YsyEBP12Ys7qmivOE
+  secret: b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABBGbrnHz8
+
+baidu:
+  translate:
+    appid: 20240416002026015
+    key: yHn6ejlSjyXymlyeOp0R
+
+youdao:
+  translate:
+    appid: 7fbaaae7e72c5794
+    key: Iv2vcb43NJYddDhIdmLyBeQENUsnURhN

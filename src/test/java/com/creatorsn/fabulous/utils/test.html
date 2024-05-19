@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .container { display: flex; height: 100vh; }
+    .contact-list { width: 30%; background: white; padding: 20px; overflow-y: auto; }
+    .chat-area { width: 70%; background: white; display: flex; flex-direction: column; justify-content: space-between; }
+    .messages { padding: 20px; overflow-y: auto; }
+    .message { margin-bottom: 12px; padding: 10px; border-radius: 10px; }
+    .sender { background-color: #d1eaff; align-self: flex-end; }
+    .recipient { background-color: #f0f0f0; align-self: flex-start; }
+    .input-area { padding: 20px; background: #eee; }
+    input[type="text"] { width: calc(100% - 100px); padding: 10px; border: none; border-radius: 10px; }
+    button { padding: 10px 20px; border: none; background-color: blue; color: white; border-radius: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="contact-list">
+    <h3>Contacts</h3>
+    <p>Contact 1</p>
+    <p>Contact 2</p>
+    <p>Contact 3</p>
+  </div>
+  <div class="chat-area">
+    <div class="messages">
+      <div class="message recipient">Hello!</div>
+      <div class="message sender">Hi there!</div>
+    </div>
+    <div class="input-area">
+      <input type="text" placeholder="Type your message...">
+      <button>Send</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

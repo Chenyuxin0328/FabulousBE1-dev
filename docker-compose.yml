@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  web:
+    image: fabulous-server
+    pull_policy: missing
+    build: .
+    ports:
+      - "5082:5083"
+    restart: always
+    depends_on:
+      - redis
+  redis:
+    image: redis:7.0
+    pull_policy: missing
+    restart: always
